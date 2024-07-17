@@ -1,0 +1,148 @@
+% !TEX encoding = UTF-8 Unicode
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75, top=1cm, bottom=1cm]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{William}{VIZARD}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\address{Flat B, 5 Hafer Road}{London SW11 1HF}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[UK mobile]{+44 (0) 7428 023 970}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{william.vizard@gmail.com}                               % optional, remove / comment the line if not wanted                      % optional, remove / comment the line if not wanted
+\social[linkedin][uk.linkedin.com/pub/william-vizard/21/ba4/2b4/]{william-vizard}                        % optional, remove / comment the line if not wanted
+\social[github][github.com/Will1v/]{GitHub}                        % optional, remove / comment the line if not wanted
+%\photo[100pt][0.4pt]{DSC03984_square.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+
+\vspace*{-2\baselineskip}
+
+{\par\color{gray!50}\rule{\textwidth}{.25ex}\par}% <----- ADDED RULE
+
+\section{Experience}
+\cventry{2021-Present}{Application Engineer - UK Team lead}{Optiver}{London, UK}{}{Leading a team of 3 to support the London, Chicago, Austin and New York operations.
+\begin{itemize}%
+	\item Operations BAU support
+	\begin{itemize}
+		\item Detect, fix or triage to other teams any production incident
+		\item Configure and deploy applications, implement and coordinate changes across the various development and infrastructure teams
+		\item Ensure coherence and scalability of design choices
+	\end{itemize}
+	\item Project work and tooling
+	\begin{itemize}
+		\item Identified inconsistencies in underlyings held in various applications, wrote a health target to proactively spot them
+		\item Designed a new JIRA workflow to handle recurring incidents to avoid duplicate work, spot trends and gather information more efficiently
+		\item Reviewed and rated the risks run in all areas of the Infra \& Dev for Optiver's Risk Committee. Highlighted a major blind spot that has been fixed since
+		\item Designed a full training for Application Engineers to efficiently onboard new joiners
+		\item Proposed a new network domain to host applications that are used for Trading but require access to Internet because of connectivity to 3rd parties
+		\item Suggested and implemented a set of new standards for the growing scope of OTC 3rd-party applications which can't follow the regular requirements of in-house applications
+		\item Wrote a Python alerter using Prometheus to detect clock sync deviations breaching MiFID thresholds. Set up a workflow to track these breaches with Compliance
+	\end{itemize}
+	\item Leading the UK team
+	\begin{itemize}
+		\item Organised the team in the UK, adapting Chicago's methods to the London constraints
+		\item Improved the handover workflow from one shift to another to better catch important changes, dates and socialise interesting incidents
+		\item Drove the team to be independent, take on more work in cooperation with both London and Chicago developers and hired a 4th UK member \newline
+	\end{itemize}
+\end{itemize}}
+
+\cventry{2018-2021}{Low latency IT Strategist}{BNP Paribas, AMM}{London, UK}{}{In charge of supporting the Equities and Fixed Income ETF Low latency automatons.
+\begin{itemize}%
+	\item Equities ETF Market Making Automaton
+	\begin{itemize}
+		\item Reviewing and improving the current setup, scripting new tools to handle and configure the automatons
+		\item Organizing changes in order to anticipate and avoid disruption on what is a very sensitive and complex environment
+		\item FPGA and Dolphin clusters configurating
+	\end{itemize}
+	\item New Fixed Income perimeter
+	\begin{itemize}
+		\item In charge of setting up the new environment and automatons
+		\item Designing new architecture and tools for the pricing, modelling bonds and ETF compositions
+		\item Coordinating several teams to ensure all components necessary are made available
+		\item Providing new Fixed Income traders with support and custom APIs (\textit{e.g.} to develop a bonds ETF pricer)
+	\end{itemize}
+	\item Scripting \& Monitoring
+	\begin{itemize}
+		\item Writing checks on processes availibilty, on feeds status, infrastructure (RAM, CPU, IO, CPU affinity etc...)
+		\item Automatizing files generation used by external processes
+		\item Generating metrics on usage and consumption in order to improve load-balancing, reduce fees etc... \newline
+	\end{itemize}
+\end{itemize}}
+
+\cventry{2011-2017}{Trading Application Support Engineer}{BNP Paribas, Global Markets}{London, UK}{}{In charge of 4 in-house trading applications on EQD and Commodities side. 
+\begin{itemize}%
+	\item \textbf{Main responsible for the ETFs Market Making tool \& Index pricing tool} building and configuring multi-kernel automatons, monitoring trades and investigating trade, feed or hedge issues. Also supporting the index pricing tool that provides source prices for the ETFs contribution.
+	\item \textbf{Main responsible for the Options trading tool} including delta adjusted orders, volatility execution. \newline{}%
+\end{itemize}
+}
+
+\cventry{2009-2011}{JAVA Developer intern}{Vision IT Group}{Paris, France}{Work/Study program}{I worked on Vision IT's Enterprise Resource Planning.
+\begin{itemize}
+      \item Development: I was asked to finish its migration from HTML to JAVA. I then continued developing the software according to the sales and the senior management's needs
+      \item Database: I designed a new database architecture to fit a broader scope for the application
+      \item Project management: alongside my development mission, I was sent to take charge of a project whose manager had just left. I had to deal with the client and organize the development team's work to meet very tight deadlines
+\end{itemize}}
+
+
+\section{Education}
+\cventry{2005-2011}{Computer Master's Degree (with honours)}{Institut Supérieur d'Electronique de Paris}{}{France}{Information Systems section \newline 
+MPSI/PSI "Classes préparatoires" followed by the ISEP Engineer Cycle}  % arguments 3 to 6 can be left empty
+\cventry{2005}{Scientific Baccalauréat, English European section (with honours)}{Paul Claudel}{Paris, France}{}{}
+
+
+\section{Languages}
+\cvdoubleitem{French}{Native}{English}{Native}
+
+\section{Skills}
+\cvdoubleitem{Monitoring, Scheduling}{Sysload, DollarU, Univiewer, Cron}{Finance}{FIX}
+\cvdoubleitem{JAVA}{Java, JEE, JDBC, JBoss}{OS}{Windows, \textbf{Unix}, Mac}
+\cvitem{Database}{\textbf{Oracle}, SQL, MySQL, PostGreSQL, CrateDB}
+\cvdoubleitem{Network}{\textit{CISCO CCNA1 Certification}}{Scripting}{\textbf{Python}, Shell}
+\cvitem{Misc}{High pressure handling, responsiveness, decision making}
+
+\section{Personal Profile}
+I am an autonomous, proactive and focused team player who has all-round IT knowledge and likes new challenges. I leverage the experience I've built over the years in the world of low-latency trading to anticipate problems, build robust and reliable tooling as well as improve and design sustainable workflows for the team.\newline
+I love working with excellence-oriented people and always aim at moving forward together, putting my qualities forward to be as useful and efficient as possible. I'm curious and focused on the long-term goals, which enables me to propose lasting solutions. I also drive my team and help them grow their strengths, explore new avenues they may interested in or step up in areas for improvement.
+
+
+\end{document}
+
