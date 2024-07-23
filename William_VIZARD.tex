@@ -15,10 +15,6 @@
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
-% character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
-
 % adjust the page margins
 \usepackage[scale=0.75, top=1cm, bottom=1cm]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
@@ -26,20 +22,11 @@
 
 % personal data
 \name{William}{VIZARD}
-%\title{Resumé title}                               % optional, remove / comment the line if not wanted
 \address{Flat B, 5 Hafer Road}{London SW11 1HF}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[UK mobile]{+44 (0) 7428 023 970}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \email{william.vizard@gmail.com}                               % optional, remove / comment the line if not wanted                      % optional, remove / comment the line if not wanted
 \social[linkedin][uk.linkedin.com/pub/william-vizard/21/ba4/2b4/]{william-vizard}                        % optional, remove / comment the line if not wanted
-\social[github][github.com/Will1v/]{GitHub}                        % optional, remove / comment the line if not wanted
-%\photo[100pt][0.4pt]{DSC03984_square.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+\social[github][github.com/Will1v/crypto_arb_finder]{GitHub}                        % optional, remove / comment the line if not wanted
 
 % bibliography with mutiple entries
 %\usepackage{multibib}
@@ -48,7 +35,6 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
@@ -58,53 +44,55 @@
 
 {\par\color{gray!50}\rule{\textwidth}{.25ex}\par}% <----- ADDED RULE
 
+
+
 \section{Experience}
-\cventry{2021-2024}{Application Engineer - UK Team lead}{Optiver}{London, UK}{}{Leading a team of 3 to support the London, Chicago, Austin and New York operations.
+\cventry{2021-Present}{Application Engineer - UK Team lead}{Optiver}{London, UK}{}{Leading a team of 3 to support the London, Chicago, Austin and New York operations.
 \begin{itemize}%
 	\item Operations BAU support
 	\begin{itemize}
-		\item \textbf{Detect, fix or triage to other teams} any production incident
-		\item \textbf{Configure and deploy} applications, implement and coordinate changes across the various development and infrastructure teams
-		\item Ensure \textbf{coherence and scalability} of design choices
+		\item Detect, fix or triage to other teams any production incident
+		\item Configure and deploy applications, implement and coordinate changes across the various development and infrastructure teams
+		\item Ensure coherence and scalability of design choices
 	\end{itemize}
 	\item Project work and tooling
 	\begin{itemize}
-		\item Identified \textbf{inconsistencies} in underlyings held in various applications, wrote a health target to proactively spot them
+		\item Identified inconsistencies in underlyings held in various applications, wrote a health target to proactively spot them
 		\item Designed a new JIRA workflow to handle recurring incidents to avoid duplicate work, spot trends and gather information more efficiently
-		\item Reviewed and rated the \textbf{risks run in all areas of the Infra \& Dev} for Optiver's Risk Committee. Highlighted a major blind spot that has been fixed since
+		\item Reviewed and rated the risks run in all areas of the Infra \& Dev for Optiver's Risk Committee. Highlighted a major blind spot that has been fixed since
 		\item Designed a full training for Application Engineers to efficiently onboard new joiners
-		\item Proposed a \textbf{new network domain} to host applications that are used for Trading but require access to Internet because of connectivity to 3rd parties
+		\item Proposed a new network domain to host applications that are used for Trading but require access to Internet because of connectivity to 3rd parties
 		\item Suggested and implemented a set of new standards for the growing scope of OTC 3rd-party applications which can't follow the regular requirements of in-house applications
-		\item Wrote a \textbf{Python alerter} using Prometheus to \textbf{detect clock sync deviations} breaching MiFID thresholds. Set up a workflow to track these breaches with Compliance
+		\item Wrote a Python alerter using Prometheus to detect clock sync deviations breaching MiFID thresholds. Set up a workflow to track these breaches with Compliance
 	\end{itemize}
-	\item \textbf{Leading the UK team}
+	\item Leading the UK team
 	\begin{itemize}
 		\item Organised the team in the UK, adapting Chicago's methods to the London constraints
-		\item Improved the handover workflow from one shift to another to better highlight important changes, dates and socialise interesting incidents
-		\item Drove the team to be independent, take on more work in \textbf{cooperation with both London and Chicago developers} and hired a 4th UK member \newline
+		\item Improved the handover workflow from one shift to another to better catch important changes, dates and socialise interesting incidents
+		\item Drove the team to be independent, take on more work in cooperation with both London and Chicago developers and hired a 4th UK member \newline
 	\end{itemize}
 \end{itemize}}
 
-\cventry{2018-2021}{Low latency IT Strategist}{BNP Paribas, AMM}{London, UK}{}{In charge of supporting the Equities and Fixed Income ETF Low latency automatons.
+\cventry{2018-2021}{Low latency IT Strategist}{BNP Paribas, AMM}{London, UK}{}{In charge of supporting the Equities and Fixed Income ETF Low latency automatons (trading bots).
 \begin{itemize}%
 	\item Equities ETF Market Making Automaton
 	\begin{itemize}
-		\item Reviewing and improving the current setup, \textbf{scripting new tools to configure} the automatons
-		\item Organizing changes in order to \textbf{anticipate and avoid disruption} on what is a very sensitive and complex environment
+		\item Reviewing and improving the current setup, scripting new tools to handle and configure the automatons
+		\item Organizing changes in order to anticipate and avoid disruption on what is a very sensitive and complex environment
 		\item FPGA and Dolphin clusters configurating
 	\end{itemize}
 	\item New Fixed Income perimeter
 	\begin{itemize}
-		\item In charge of \textbf{setting up the new environment and automatons}
+		\item In charge of setting up the new environment and automatons
 		\item Designing new architecture and tools for the pricing, modelling bonds and ETF compositions
 		\item Coordinating several teams to ensure all components necessary are made available
-		\item Providing new Fixed Income traders with \textbf{support and custom APIs} (\textit{e.g.} to develop a bonds ETF pricer)
+		\item Providing new Fixed Income traders with support and custom APIs (\textit{e.g.} to develop a bonds ETF pricer)
 	\end{itemize}
 	\item Scripting \& Monitoring
 	\begin{itemize}
-		\item \textbf{Writing checks} on processes availibilty, on feeds status, infrastructure (RAM, CPU, IO, CPU affinity etc...)
-		\item \textbf{Automatizing files generation} used by external processes
-		\item \textbf{Generating metrics} on usage and consumption in order to improve load-balancing, reduce fees etc... \newline
+		\item Writing checks on processes availibilty, on feeds status, infrastructure (RAM, CPU, IO, CPU affinity etc...)
+		\item Automatizing files generation used by external processes
+		\item Generating metrics on usage and consumption in order to improve load-balancing, reduce fees etc... \newline
 	\end{itemize}
 \end{itemize}}
 
@@ -122,8 +110,14 @@
       \item Project management: alongside my development mission, I was sent to take charge of a project whose manager had just left. I had to deal with the client and organize the development team's work to meet very tight deadlines
 \end{itemize}}
 
+\section{Skills}
+\cvdoubleitem{Development:}{\textbf{Python}, \textbf{Jupyter}, Bash, Batch, C, Java}{}{}
+\cvitem{Database:}{\textbf{Oracle}, \textbf{PostGreSQL}, SQL, MySQL, CrateDB}
+\cvdoubleitem{Monitoring:}{Prometheus, Grafana, Elasticsearch}{Scheduling:}{Sysload, Cron}
+\cvdoubleitem{Misc:}{High pressure handling, responsiveness, decision making}{OS:}{Windows, \textbf{Unix}, Mac}
 
 \section{Education}
+\cventry{2024}{Cisco Certified Network Associate}{Cisco}{}{}{}
 \cventry{2005-2011}{Computer Master's Degree (with honours)}{Institut Supérieur d'Electronique de Paris}{}{France}{Information Systems section \newline 
 MPSI/PSI "Classes préparatoires" followed by the ISEP Engineer Cycle}  % arguments 3 to 6 can be left empty
 \cventry{2005}{Scientific Baccalauréat, English European section (with honours)}{Paul Claudel}{Paris, France}{}{}
@@ -132,16 +126,10 @@ MPSI/PSI "Classes préparatoires" followed by the ISEP Engineer Cycle}  % argume
 \section{Languages}
 \cvdoubleitem{French}{Native}{English}{Native}
 
-\section{Skills}
-\cvdoubleitem{Monitoring, Scheduling}{Sysload, DollarU,  \textbf{Cron},  \textbf{Prometheus}, \textbf{Elasticsearch}}{Finance}{FIX}
-\cvdoubleitem{JAVA}{Java, JEE, JDBC, JBoss}{OS}{Windows, \textbf{Linux}, Mac}
-\cvitem{Database}{\textbf{Oracle}, \textbf{SQL}, MySQL, \textbf{PostGreSQL}, CrateDB}
-\cvdoubleitem{Network}{\textbf{Cisco CCNA Certification}}{Scripting}{\textbf{Python}, Bash, Powershell}
-\cvitem{Misc}{High pressure handling, responsiveness, decision making}
 
 \section{Personal Profile}
-I am an autonomous, proactive and focused team player who has all-round IT knowledge and likes new challenges. I leverage the experience I've built over the years in the world of low-latency trading to anticipate problems, build robust and reliable tooling as well as improve and design sustainable workflows for the team.\newline
-I love working with excellence-oriented people and always aim at moving forward together, putting my qualities forward to be as useful and efficient as possible. I'm curious and focused on the long-term goals, which enables me to propose lasting solutions. I also drive my team and help them grow their strengths, explore new avenues they may interested in or step up in areas for improvement.
+I am an autonomous and focus team player with a passion for solving complex problems and creating sustainable, efficient solutions. My recent experience as a team lead has honed my ability to guide teams towards success, but I am equally comfortable as an individual contributor. \newline
+With my constructive mindset and proactive approach, I thrive in collaborative environments where I can help others grow and succeed. I am committed to excellence and continuous improvement, always looking for ways to bring value to my team and the teams around me. Pragmatic and focused on long-term goals, I always aim to deliver impactful solutions that will drive both personal and organizational success.
 
 
 \end{document}
